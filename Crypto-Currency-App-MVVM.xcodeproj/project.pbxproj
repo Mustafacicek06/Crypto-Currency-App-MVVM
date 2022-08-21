@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		080C29EB28B2C8A20058442F /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080C29EA28B2C8A20058442F /* CryptoTableViewCell.swift */; };
+		080C29ED28B2CCA30058442F /* CryptoCurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080C29EC28B2CCA30058442F /* CryptoCurrencyModel.swift */; };
 		089529EA28B2A53800A326BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089529E928B2A53800A326BF /* AppDelegate.swift */; };
 		089529EC28B2A53800A326BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089529EB28B2A53800A326BF /* SceneDelegate.swift */; };
 		089529EE28B2A53800A326BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089529ED28B2A53800A326BF /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		080C29EA28B2C8A20058442F /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
+		080C29EC28B2CCA30058442F /* CryptoCurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyModel.swift; sourceTree = "<group>"; };
 		089529E628B2A53800A326BF /* Crypto-Currency-App-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto-Currency-App-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		089529E928B2A53800A326BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089529EB28B2A53800A326BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				089529FE28B2A67400A326BF /* Features */,
+				080C29EA28B2C8A20058442F /* CryptoTableViewCell.swift */,
 				089529FD28B2A54000A326BF /* Core */,
 				089529F228B2A53900A326BF /* Assets.xcassets */,
 				089529F728B2A53900A326BF /* Info.plist */,
@@ -99,6 +104,7 @@
 		08952A0028B2A68100A326BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				080C29EC28B2CCA30058442F /* CryptoCurrencyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,8 +204,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				089529EE28B2A53800A326BF /* ViewController.swift in Sources */,
+				080C29ED28B2CCA30058442F /* CryptoCurrencyModel.swift in Sources */,
 				089529EA28B2A53800A326BF /* AppDelegate.swift in Sources */,
 				089529EC28B2A53800A326BF /* SceneDelegate.swift in Sources */,
+				080C29EB28B2C8A20058442F /* CryptoTableViewCell.swift in Sources */,
 				08952A0528B2A88300A326BF /* JsonTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

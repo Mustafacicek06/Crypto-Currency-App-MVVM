@@ -23,6 +23,7 @@ final class JsonTableView: NSObject{
     // my model
     private lazy var items: [Int] = []
     
+    /// Json table view output models
     weak var delegate: JsonTableViewOutputProtocol?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,7 +31,9 @@ final class JsonTableView: NSObject{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "CryptoCell", for: indexPath ) as! CryptoTableViewCell
+        
+        return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.onSelected(item: items[indexPath.row])
@@ -41,7 +44,7 @@ final class JsonTableView: NSObject{
 extension JsonTableView : UITableViewDelegate, UITableViewDataSource {}
 extension JsonTableView: JsonTableViewProtocol {
     func update(items: [Int]) {
-        
+        self.items = items
     }
 }
 

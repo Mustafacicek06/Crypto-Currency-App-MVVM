@@ -9,13 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    
+
     private let jsonTableView: JsonTableView = JsonTableView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        initDelegate()
+     
         
+        
+    }
+    
+    private func initDelegate() {
         tableView.dataSource = jsonTableView
         tableView.delegate = jsonTableView
         jsonTableView.delegate = self
@@ -29,6 +35,6 @@ extension ViewController: JsonTableViewOutputProtocol {
         print(item)
     }
     
-    
+
 }
 
