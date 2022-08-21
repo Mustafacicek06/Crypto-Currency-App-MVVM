@@ -13,6 +13,8 @@ import Foundation
 struct CryptoCurrencyModel: Decodable  {
     let currency: String?
     let price: String?
+ 
+    
     
 }
 

@@ -16,8 +16,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         initDelegate()
-     
+        let myApiKey = "ae00a59a93623c9005482d4d573310e67e4b1434"
+        let baseUrl =  URL(string: "https://raw.githubusercontent.com/atilsamancioglu/K21-JSONDataSet/master/crypto.json")
         
+        CryptoService.shared.downloadCurrencies(url: baseUrl!) { (cryptos) in
+            if let cryptos = cryptos {
+                print(cryptos)
+            }
+        }
+      
         
     }
     

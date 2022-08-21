@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		080C29EB28B2C8A20058442F /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080C29EA28B2C8A20058442F /* CryptoTableViewCell.swift */; };
 		080C29ED28B2CCA30058442F /* CryptoCurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080C29EC28B2CCA30058442F /* CryptoCurrencyModel.swift */; };
+		080C29EF28B2CE720058442F /* CryptoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080C29EE28B2CE720058442F /* CryptoService.swift */; };
 		089529EA28B2A53800A326BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089529E928B2A53800A326BF /* AppDelegate.swift */; };
 		089529EC28B2A53800A326BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089529EB28B2A53800A326BF /* SceneDelegate.swift */; };
 		089529EE28B2A53800A326BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089529ED28B2A53800A326BF /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		080C29EA28B2C8A20058442F /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
 		080C29EC28B2CCA30058442F /* CryptoCurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyModel.swift; sourceTree = "<group>"; };
+		080C29EE28B2CE720058442F /* CryptoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoService.swift; sourceTree = "<group>"; };
 		089529E628B2A53800A326BF /* Crypto-Currency-App-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto-Currency-App-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		089529E928B2A53800A326BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089529EB28B2A53800A326BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		089529FF28B2A67C00A326BF /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				080C29EE28B2CE720058442F /* CryptoService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				089529EC28B2A53800A326BF /* SceneDelegate.swift in Sources */,
 				080C29EB28B2C8A20058442F /* CryptoTableViewCell.swift in Sources */,
 				08952A0528B2A88300A326BF /* JsonTableView.swift in Sources */,
+				080C29EF28B2CE720058442F /* CryptoService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
