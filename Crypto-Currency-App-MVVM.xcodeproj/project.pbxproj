@@ -13,6 +13,7 @@
 		089529F128B2A53800A326BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089529EF28B2A53800A326BF /* Main.storyboard */; };
 		089529F328B2A53900A326BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089529F228B2A53900A326BF /* Assets.xcassets */; };
 		089529F628B2A53900A326BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089529F428B2A53900A326BF /* LaunchScreen.storyboard */; };
+		08952A0528B2A88300A326BF /* JsonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08952A0428B2A88300A326BF /* JsonTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		089529F228B2A53900A326BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		089529F528B2A53900A326BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		089529F728B2A53900A326BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08952A0428B2A88300A326BF /* JsonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,72 @@
 		089529E828B2A53800A326BF /* Crypto-Currency-App-MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				089529E928B2A53800A326BF /* AppDelegate.swift */,
-				089529EB28B2A53800A326BF /* SceneDelegate.swift */,
-				089529ED28B2A53800A326BF /* ViewController.swift */,
-				089529EF28B2A53800A326BF /* Main.storyboard */,
+				089529FE28B2A67400A326BF /* Features */,
+				089529FD28B2A54000A326BF /* Core */,
 				089529F228B2A53900A326BF /* Assets.xcassets */,
-				089529F428B2A53900A326BF /* LaunchScreen.storyboard */,
 				089529F728B2A53900A326BF /* Info.plist */,
 			);
 			path = "Crypto-Currency-App-MVVM";
+			sourceTree = "<group>";
+		};
+		089529FD28B2A54000A326BF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				089529E928B2A53800A326BF /* AppDelegate.swift */,
+				089529EB28B2A53800A326BF /* SceneDelegate.swift */,
+				089529ED28B2A53800A326BF /* ViewController.swift */,
+				089529F428B2A53900A326BF /* LaunchScreen.storyboard */,
+				089529EF28B2A53800A326BF /* Main.storyboard */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		089529FE28B2A67400A326BF /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				08952A0228B2A69C00A326BF /* View */,
+				08952A0128B2A68600A326BF /* ViewModel */,
+				08952A0028B2A68100A326BF /* Model */,
+				089529FF28B2A67C00A326BF /* Service */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		089529FF28B2A67C00A326BF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		08952A0028B2A68100A326BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		08952A0128B2A68600A326BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		08952A0228B2A69C00A326BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08952A0328B2A75C00A326BF /* SubView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08952A0328B2A75C00A326BF /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				08952A0428B2A88300A326BF /* JsonTableView.swift */,
+			);
+			path = SubView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +200,7 @@
 				089529EE28B2A53800A326BF /* ViewController.swift in Sources */,
 				089529EA28B2A53800A326BF /* AppDelegate.swift in Sources */,
 				089529EC28B2A53800A326BF /* SceneDelegate.swift in Sources */,
+				08952A0528B2A88300A326BF /* JsonTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
