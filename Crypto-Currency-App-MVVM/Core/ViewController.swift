@@ -10,14 +10,14 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
-    private let jsonTableView: JsonTableView = JsonTableView()
+    private let cryptoTableView: CryptoTableView = CryptoTableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         initDelegate()
         let myApiKey = "ae00a59a93623c9005482d4d573310e67e4b1434"
-        let baseUrl =  URL(string: "https://raw.githubusercontent.com/atilsamancioglu/K21-JSONDataSet/master/crypto.json")
+        let baseUrl =  URL(string: "https://api.nomics.com/v1/currencies/ticker?key=\(myApiKey)")
         
         CryptoService.shared.downloadCurrencies(url: baseUrl!) { (cryptos) in
             if let cryptos = cryptos {
@@ -29,19 +29,19 @@ class ViewController: UIViewController {
     }
     
     private func initDelegate() {
-        tableView.dataSource = jsonTableView
-        tableView.delegate = jsonTableView
-        jsonTableView.delegate = self
+        tableView.dataSource = cryptoTableView
+        tableView.delegate = cryptoTableView
+        // cryptoTableView.delegate = self
     }
 
 
 }
-
-extension ViewController: JsonTableViewOutputProtocol {
+/*
+extension ViewController: CryptoTableViewOutputProtocol {
     func onSelected(item: Int) {
         print(item)
     }
     
 
 }
-
+*/

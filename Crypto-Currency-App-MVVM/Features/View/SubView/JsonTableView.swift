@@ -8,26 +8,26 @@
 import Foundation
 import UIKit
 
-protocol JsonTableViewProtocol {
-    func update(items: [Int])
+protocol CryptoTableViewProtocol {
+    func update(items: CryptoCurrencyModel)
 }
 
 // just usage class weak
-protocol JsonTableViewOutputProtocol : class {
-    func onSelected(item: Int)
+protocol CryptoTableViewOutputProtocol : class {
+    func onSelected(item: CryptoCurrencyModel?)
 }
 
 
 // NSObject is just a trap to fetch the main methods of the tableView
-final class JsonTableView: NSObject{
+final class CryptoTableView: NSObject{
     // my model
-    private lazy var items: [Int] = []
+    private lazy var items: CryptoListViewModel? = nil
     
     /// Json table view output models
-    weak var delegate: JsonTableViewOutputProtocol?
+    weak var delegate: CryptoTableViewOutputProtocol?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return items?.numberOfRowsInSection() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,15 +36,16 @@ final class JsonTableView: NSObject{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.onSelected(item: items[indexPath.row])
+        delegate?.onSelected(item: (items?.cryptoCurrencyList[indexPath.row]))
     }
     
 }
 
-extension JsonTableView : UITableViewDelegate, UITableViewDataSource {}
-extension JsonTableView: JsonTableViewProtocol {
-    func update(items: [Int]) {
-        self.items = items
+extension CryptoTableView : UITableViewDelegate, UITableViewDataSource {}
+/*
+extension CryptoTableView: CryptoTableViewProtocol {
+    func update(items: [CryptoViewModel],index: Int) {
+        self.items[index] = items
     }
 }
-
+*/
