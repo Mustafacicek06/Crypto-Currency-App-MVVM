@@ -32,12 +32,15 @@ final class CryptoTableView: NSObject{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "CryptoCell", for: indexPath ) as! CryptoTableViewCell
-        
+        var cryptoViewModel = self.items?.getInListIndex(indexPath.row)
+        cell.currencyText.text = cryptoViewModel?.cryptoName
+        cell.priceText.text = cryptoViewModel?.cryptoPrice
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.onSelected(item: (items?.cryptoCurrencyList[indexPath.row]))
     }
+    
     
 }
 
